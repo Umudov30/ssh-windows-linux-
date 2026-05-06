@@ -1,0 +1,13 @@
+# Private keys - heç vaxt repo-ya əlavə etmə!
+id_rsa
+id_ed25519
+*.pem
+test
+*_rsa
+
+# Public keys (optional - bunları repo-ya əlavə etmək olar)
+# *.pub
+
+# OS files
+.DS_Store
+Thumbs.db
