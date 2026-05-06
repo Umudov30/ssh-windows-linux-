@@ -1,0 +1,54 @@
+# =============================================
+# SSH Config Faylı — Nümunə
+# Yer: C:\Users\<username>\.ssh\config  (Windows)
+#      ~/.ssh/config                    (Linux/Mac)
+# =============================================
+
+
+# ----------------------------
+# Sadə qoşulma (default açar)
+# ----------------------------
+Host myserver
+    HostName 192.168.159.128
+    User qiyas
+
+
+# ----------------------------
+# Öz adını verdiyin açar ilə
+# ----------------------------
+Host testserver
+    HostName 192.168.159.128
+    User qiyas
+    IdentityFile ~/.ssh/test
+
+
+# ----------------------------
+# Fərqli port ilə
+# ----------------------------
+Host prodserver
+    HostName 10.10.10.10
+    User admin
+    Port 2222
+    IdentityFile ~/.ssh/id_rsa
+
+
+# ----------------------------
+# Birdən çox server üçün
+# ----------------------------
+Host dev
+    HostName 192.168.1.100
+    User developer
+    IdentityFile ~/.ssh/dev_key
+
+Host staging
+    HostName 192.168.1.200
+    User deploy
+    IdentityFile ~/.ssh/staging_key
+
+
+# ----------------------------
+# Bütün serverləra aid ümumi parametrlər
+# ----------------------------
+Host *
+    ServerAliveInterval 60
+    ServerAliveCountMax 3
